@@ -23,6 +23,15 @@ public class RestaurantApp {
 		}
 		return tables;
 	}
+	
+	public static void removeCustomer(List<Restaurant> list, String fname) {
+		
+		for (int i = 0; i < list.size(); ++i) {
+			if (list.get(i).getFirstName().equals(fname)) {
+				list.remove(i);
+			}
+		}
+	}
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
@@ -81,6 +90,7 @@ public class RestaurantApp {
 				
 				totalSeats = totalSeats + addSeats(customerList, fname);
 				rest.remove(fname, lname);
+				removeCustomer(customerList, fname);
 				System.out.println(fname + " " + lname + " has been removed.");
 			} else if (input.equals("F")) {
 				System.out.println();
