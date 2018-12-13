@@ -13,6 +13,16 @@ public class RestaurantApp {
 
 		return rest;
 	}
+	
+	public static int addSeats(List<Restaurant> list, String fname) {
+		int tables = 0;
+		for (int i = 0; i < list.size(); ++i) {
+			if (list.get(i).getFirstName().equals(fname)) {
+				tables = list.get(i).getTables();
+			}
+		}
+		return tables;
+	}
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
@@ -59,10 +69,8 @@ public class RestaurantApp {
 			} else if (input.equals("R")) {
 				System.out.println();
 				System.out.println("List of Customers: ");
-				int tables = 0;
 				for (int i = 0; i < customerList.size(); ++i) {
 					System.out.println(customerList.get(i).toString());
-					tables = customerList.get(i).getTables();
 				}
 				System.out.println();
 				System.out.print("First Name: ");
@@ -71,9 +79,9 @@ public class RestaurantApp {
 				lname = in.nextLine();
 				System.out.println();
 				
+				totalSeats = totalSeats + addSeats(customerList, fname);
 				rest.remove(fname, lname);
 				System.out.println(fname + " " + lname + " has been removed.");
-				totalSeats = totalSeats + tables;
 			} else if (input.equals("F")) {
 				System.out.println();
 				System.out.println("List of Customers Recorded: ");
