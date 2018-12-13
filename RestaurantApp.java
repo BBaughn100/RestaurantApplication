@@ -60,7 +60,7 @@ public class RestaurantApp {
 				System.out.println();
 				System.out.println("List of Customers: ");
 				int tables = 0;
-				for (int i = tables; i < customerList.size(); ++i) {
+				for (int i = 0; i < customerList.size(); ++i) {
 					System.out.println(customerList.get(i).toString());
 					tables = customerList.get(i).getTables();
 				}
