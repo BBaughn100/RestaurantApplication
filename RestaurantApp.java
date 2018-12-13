@@ -34,7 +34,7 @@ public class RestaurantApp {
 			String fname = "";
 			String lname = "";
 			int numSeats = 0;
-			Restaurant rest = new Restaurant("", "", numSeats);
+			Restaurant rest = new Restaurant(fname, lname, numSeats);
 			if (input.equals("A")) {
 				System.out.println();
 				System.out.print("First Name: ");
