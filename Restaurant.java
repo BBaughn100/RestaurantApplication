@@ -11,19 +11,18 @@ public class Restaurant {
 		this.numSeats = numSeat;
 	}
 	
-	public void add(String fname, String lname, int num) {
-		fname = this.firstname;
-		lname = this.lastname;
-		num = this.numSeats;
-	}
-	
 	public String getName() {
 		return this.firstname + this.lastname;
+	}
+	
+	public String getFirstName() {
+		return this.firstname;
 	}
 	
 	public int getTables() {
 		return this.numSeats;
 	}
+	
 	
 	public void addTables(int num) {
 		this.numSeats = num;
