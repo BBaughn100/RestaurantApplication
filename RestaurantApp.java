@@ -1,6 +1,6 @@
 /*
- * Display num of chairs, available seats, able to add
- * and delete num of available seats
+ * Restaurant app that allows you to add, remove, or find customers
+ * as well as quit the program
  */
 import java.util.ArrayList;
 import java.util.List;
